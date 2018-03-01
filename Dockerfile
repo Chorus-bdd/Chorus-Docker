@@ -16,4 +16,4 @@ EXPOSE 9080
 
 ENV PATH="/usr/share/chorus:${PATH}"
 
-CMD ["chorus", "-f", "/features"]
+CMD ["sleep", "infinity"]
