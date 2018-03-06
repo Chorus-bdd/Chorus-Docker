@@ -14,7 +14,6 @@ RUN wget https://github.com/Chorus-bdd/Chorus/releases/download/$CHORUS_VERSION/
     && tar -C /usr/share/chorus -xzvf chorus-$CHORUS_VERSION.tar \
     && rm chorus-$CHORUS_VERSION.tar
 
-COPY chorus /usr/share/chorus
 WORKDIR /srv/
 
 EXPOSE 9080
