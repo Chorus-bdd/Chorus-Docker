@@ -13,7 +13,7 @@ ENV CHORUS_VERSION 3.0.0.DEV37
 RUN wget https://github.com/Chorus-bdd/Chorus/releases/download/$CHORUS_VERSION/chorus-$CHORUS_VERSION.tar \
     && tar -xvf chorus-$CHORUS_VERSION.tar 
 
-COPY -r chorus-$CHORUS_VERSION /usr/share/chorus
+COPY chorus-$CHORUS_VERSION /usr/share/chorus
 RUN rm -rf chorus-$CHORUS_VERSION   
 
 WORKDIR /srv/
