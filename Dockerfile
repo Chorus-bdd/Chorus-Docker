@@ -10,11 +10,10 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 ENV CHORUS_VERSION 3.0.0.DEV37
+RUN mkdir /usr/share/chorus
 RUN wget https://github.com/Chorus-bdd/Chorus/releases/download/$CHORUS_VERSION/chorus-$CHORUS_VERSION.tar \
-    && tar -xvf chorus-$CHORUS_VERSION.tar 
-
-COPY chorus-$CHORUS_VERSION /usr/share/chorus
-RUN rm -rf chorus-$CHORUS_VERSION   
+    && tar -C /usr/share/chorus --strip-components=1 -xvf chorus-$CHORUS_VERSION.tar \
+    && rm chorus-$CHORUS_VERSION.tar
 
 WORKDIR /srv/
 
