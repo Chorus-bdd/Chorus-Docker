@@ -22,3 +22,4 @@ EXPOSE 9080
 ENV PATH="/usr/share/chorus:${PATH}"
 
 CMD ["sleep", "infinity"]
+
